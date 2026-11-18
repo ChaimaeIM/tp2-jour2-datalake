@@ -77,7 +77,7 @@ Les deux destinations sont différentes pour ne pas écraser le premier dépôt.
 | Provenance | Événements réels récupérés via l'API NiFi (RECEIVE, SEND, ATTRIBUTES_MODIFIED). | `docs/ingestion/provenance.md`, `preuves/j2/nifi/provenance-events.json` |
 | Réponses aux questions de recul | Rédigées. | `docs/questions-de-recul.md` |
 
-Les preuves sont des sorties texte et JSON, rangées dans `preuves/j2/`. Il n'y a pas de captures d'écran : l'environnement n'a pas de navigateur piloté.
+Les preuves sont des sorties texte, JSON et captures d'écran, rangées dans `preuves/j2/`. La capture du canvas NiFi est dans `preuves/j2/nifi/01-canvas-flux.png`, et celle de l'interface NameNode (version 3.5.0, safe mode désactivé, 2 blocs) dans `preuves/j2/hdfs/02-namenode-overview.png`. La capture du dossier `/retail-lake/raw/nifi` contenant `store.dat` (3,31 Ko, répliqué 1 fois) est dans `preuves/j2/hdfs/05-hdfs-raw-nifi.png`. Les propriétés de PutHDFS sont dans `preuves/j2/nifi/03-configuration-puthdfs.png`, et les événements de provenance dans `preuves/j2/nifi/04-provenance.png`.
 
 ## Structure du dépôt
 

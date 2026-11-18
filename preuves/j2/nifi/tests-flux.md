@@ -29,7 +29,19 @@ Le détail de la configuration est dans `configuration-flux.md`. La provenance e
 
 Le FlowFile en échec est resté visible dans le journal. Il n'a pas été supprimé, comme le demande le sujet.
 
-## Ce qui n'a pas été fait
+## Captures commentées
 
-- Captures d'écran de l'interface NiFi : l'environnement n'a pas de navigateur piloté. Les données de configuration et de provenance sont fournies en texte et en JSON à la place.
+- `01-canvas-flux.png` : canvas NiFi. GetFile, PutHDFS et LogAttribute sont en marche. La file `success` de PutHDFS contient 1 FlowFile (3,31 Ko) : le transfert est en cours ou terminé vers le Funnel, comme décrit dans `flux-nifi.md`.
+- `03-configuration-puthdfs.png` : propriétés de PutHDFS. `Directory` vaut `/retail-lake/raw/nifi` et `Conflict Resolution Strategy` vaut `fail`, comme prévu dans le sujet. La propriété `Hadoop Configuration Resources` pointe vers `core-site.xml` et `hdfs-site.xml`.
+- `04-provenance.png` : quatre événements pour le fichier `store.dat`. Deux RECEIVE (GetFile, 15:45:25 et 15:46:25) et un SEND suivi d'un ATTRIBUTES_MODIFIED (PutHDFS, 15:45:26). Le second RECEIVE correspond au test d'erreur contrôlée : le fichier est lu, puis refusé par PutHDFS.
+- `../hdfs/05-hdfs-raw-nifi.png` : `store.dat` présent dans `/retail-lake/raw/nifi`, taille 3,31 Ko, réplication 1, propriétaire `chaimae_imrani`. Le fichier est bien arrivé dans HDFS.
+- `../hdfs/02-namenode-overview.png` : interface du NameNode, version 3.5.0, safe mode désactivé, 2 blocs. Le cluster est en état actif.
+
+## Captures (liste initiale)
+
+- `01-canvas-flux.png` : canvas NiFi du flux GetFile, PutHDFS, LogAttribute, avec les files et les compteurs.
+
+Les données de configuration et de provenance sont aussi fournies en texte et en JSON.
+
+## Ce qui n'a pas été fait
 - Test de droits sur le dossier d'entrée : non réalisé pour ne pas altérer le reste de l'environnement.
