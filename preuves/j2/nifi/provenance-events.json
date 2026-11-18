@@ -1,0 +1,54 @@
+[
+  {
+    "eventId": 3,
+    "eventType": "RECEIVE",
+    "componentName": "GetFile",
+    "componentType": "GetFile",
+    "flowFileUuid": "7ea23dc1-0e57-407f-8d21-2c365e32b46f",
+    "fileName": null,
+    "fileSize": "3.31 KB",
+    "timestamp": "11/17/2026 15:46:25.620 CET",
+    "transitUri": "file:/home/chaimae_imrani/data/nifi/input/store.dat",
+    "relationship": null,
+    "details": null
+  },
+  {
+    "eventId": 2,
+    "eventType": "ATTRIBUTES_MODIFIED",
+    "componentName": "PutHDFS",
+    "componentType": "PutHDFS",
+    "flowFileUuid": "4432e526-c807-4809-adc0-c83fdf834e23",
+    "fileName": null,
+    "fileSize": "3.31 KB",
+    "timestamp": "11/17/2026 15:45:26.814 CET",
+    "transitUri": null,
+    "relationship": null,
+    "details": null
+  },
+  {
+    "eventId": 1,
+    "eventType": "SEND",
+    "componentName": "PutHDFS",
+    "componentType": "PutHDFS",
+    "flowFileUuid": "4432e526-c807-4809-adc0-c83fdf834e23",
+    "fileName": null,
+    "fileSize": "3.31 KB",
+    "timestamp": "11/17/2026 15:45:26.812 CET",
+    "transitUri": "hdfs://localhost:9000/retail-lake/raw/nifi/store.dat",
+    "relationship": null,
+    "details": null
+  },
+  {
+    "eventId": 0,
+    "eventType": "RECEIVE",
+    "componentName": "GetFile",
+    "componentType": "GetFile",
+    "flowFileUuid": "4432e526-c807-4809-adc0-c83fdf834e23",
+    "fileName": null,
+    "fileSize": "3.31 KB",
+    "timestamp": "11/17/2026 15:45:25.638 CET",
+    "transitUri": "file:/home/chaimae_imrani/data/nifi/input/store.dat",
+    "relationship": null,
+    "details": null
+  }
+]
